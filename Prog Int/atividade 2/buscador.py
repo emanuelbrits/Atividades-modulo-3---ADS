@@ -24,11 +24,14 @@ def search(termo, url, profundidade):
 
     text = soup.get_text().lower()
 
+    termos = []
     if termo.lower() in text.lower():
         index_inicio = max(text.lower().index(termo.lower()) - 20, 0)
         index_fim = min(text.lower().index(termo.lower()) + 20, len(text))
-        print(f"Termo encontradao em {url}: {text[index_inicio:index_fim].strip()}")
-        print("")
+        termo_encontrado = text[index_inicio:index_fim]
+        if termo_encontrado not in termos:
+            termos.append(termo_encontrado)
+            print(f"{termo_encontrado}")
 
     referencias = 0
     maior_referencia = 0
