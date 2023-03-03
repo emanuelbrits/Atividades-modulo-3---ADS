@@ -33,19 +33,20 @@ def search(termo, url, profundidade):
             termos.append(termo_encontrado)
             print(f"{termo_encontrado}")
 
-    referencias = 0
+    visitas = 0
     maior_referencia = 0
     link_maior_referencia = ''
 
     for link in links:
         if url in link:
-            referencias += 1
+            visitas += 1
     
-    if referencias > maior_referencia:
+    if visitas > maior_referencia:
         link_maior_referencia = ''
         link_maior_referencia+= url
 
     return link_maior_referencia
 
 aux = search("torneio", "https://www.rocketleague.com/pt-br//", 1)
+print()
 print(f"link com mais referências {aux}")
