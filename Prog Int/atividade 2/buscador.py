@@ -22,12 +22,12 @@ def search(termo, url, profundidade):
                 visitados.append(href)
                 search(termo, href, profundidade-1)
 
-    text = soup.get_text().lower()
+    text = soup.get_text()
 
     termos = []
-    if termo.lower() in text.lower():
-        index_inicio = max(text.lower().index(termo.lower()) - 20, 0)
-        index_fim = min(text.lower().index(termo.lower()) + 20, len(text))
+    if termo in text:
+        index_inicio = max(text.index(termo) - 20, 0)
+        index_fim = min(text.index(termo) + 20, len(text))
         termo_encontrado = text[index_inicio:index_fim]
         if termo_encontrado not in termos:
             termos.append(termo_encontrado)
