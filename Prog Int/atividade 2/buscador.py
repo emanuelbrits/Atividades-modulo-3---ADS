@@ -10,7 +10,7 @@ def search(termo, url, profundidade):
         return
 
     response = requests.get(url)
-    soup = BeautifulSoup(response.content, 'html.parser')
+    soup = BeautifulSoup(response.content, 'html.parser',from_encoding="iso-8859-1")
 
     visitados = []
     links = []
@@ -22,16 +22,16 @@ def search(termo, url, profundidade):
                 visitados.append(href)
                 search(termo, href, profundidade-1)
 
-    text = soup.get_text()
+    text = soup.get_text().upper()
 
     termos = []
-    if termo in text:
-        index_inicio = max(text.index(termo) - 20, 0)
-        index_fim = min(text.index(termo) + 20, len(text))
+    if termo.upper() in text.upper():
+        index_inicio = max(text.upper().index(termo.upper()) - 20, 0)
+        index_fim = min(text.upper().index(termo.upper()) + 20, len(text))
         termo_encontrado = text[index_inicio:index_fim]
         if termo_encontrado not in termos:
             termos.append(termo_encontrado)
-            print(f"{termo_encontrado}")
+            print(f"Termo encontrado em {url}: {termo_encontrado}")
 
     visitas = 0
     maior_referencia = 0
@@ -42,11 +42,10 @@ def search(termo, url, profundidade):
             visitas += 1
     
     if visitas > maior_referencia:
-        link_maior_referencia = ''
-        link_maior_referencia+= url
+        link_maior_referencia = url
 
     return link_maior_referencia
 
-aux = search("torneio", "https://www.rocketleague.com/pt-br//", 1)
+aux = search("gol", "https://www.rocketleague.com/pt-br//", 2)
 print()
 print(f"link com mais referências {aux}")
