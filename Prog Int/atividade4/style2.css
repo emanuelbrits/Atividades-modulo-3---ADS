@@ -1,0 +1,79 @@
+@font-face {
+    font-family: tilt-neon;
+    src: url(../../../../../Downloads/TiltNeon[XROT\,YROT].woff2);
+}
+
+* {
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial;
+    background: linear-gradient(to left, #b3cce2, #D9CCC1);
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: .5rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h1, h2 {
+    background: #005eb0;
+    color: #D9CCC1;
+}
+
+p {
+    font-size: 1rem;
+    color: #024059;
+}
+
+.motivacional {
+    font-family: tilt-neon;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.por {
+    text-align: right;
+}
+
+.autor {
+    color: black;
+}
+
+.data {
+    text-align: left;
+    font-size: .8rem;
+}
+
+.por, .data {
+    color: darkslategray;
+}
+
+.autor, .data {
+    font-style: italic;
+}
+
+.riscado {
+    position: relative;
+}
+  .riscado:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    right: 0;
+    border-top: 1px solid;
+    border-color: inherit;
+    
+    -webkit-transform:rotate(-5deg);
+    -moz-transform:rotate(-5deg);
+    -ms-transform:rotate(-5deg);
+    -o-transform:rotate(-5deg);
+    transform:rotate(-5deg);
+}
