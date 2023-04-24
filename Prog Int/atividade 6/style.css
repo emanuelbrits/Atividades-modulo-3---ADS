@@ -1,0 +1,23 @@
+.roma {
+    list-style-type: upper-roman;
+}
+
+.sinal {
+    list-style-image: url(./img/sinal-de-transito_resized.png);
+}
+
+.atencao {
+    list-style-image: url(./img/atencao_resized.png);
+}
+
+.proibido {
+    list-style-image: url(./img/entrada-proibida_resized.png);
+}
+
+.velocidade {
+    list-style-image: url(./img/limite-de-velocidade_resized.png);
+}
+
+.pare {
+    list-style-image: url(./img/sinal-de-parada_resized.png);
+}
