@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.sidebar {
+    position: fixed;
+    width: 140px;
+    left: -20px;
+    height: 100%;
+    border-right: 4px solid rgb(78, 78, 78);
+}
+
+.sidebar img {
+    height: 100px;
+    width: 100px;
+}
+
+.logo {
+    padding-top: 30px;
+}
+
+.sidebar a {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 65px;
+    width: 100%;
+    color: black;
+    line-height: 65px;
+    padding-left: 30px;
+    padding-bottom: 190px;
+    box-sizing: border-box;
+}
