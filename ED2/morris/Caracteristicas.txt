@@ -1,0 +1,4 @@
+O algoritmo de Morris permite realizar o percurso in-order (e também pre-order) em uma árvore binária sem utilizar pilhas ou recursão adicional.
+Ele utiliza a estratégia de modificar temporariamente os ponteiros dos nós da árvore para evitar o uso de pilha ou recursão.
+O algoritmo possui complexidade de tempo O(n) e complexidade de espaço O(1), onde n é o número de nós da árvore.
+É um método eficiente para realizar o percurso in-order de forma iterrativa, avançando para o nó filho esquerdo ou direito conforme a lógica do percurso desejado.
