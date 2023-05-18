@@ -1,69 +1,13 @@
 body {
     background: #271F36;
-    font-family: Cambria;
 }
 
-.logo {
-    height: 100px;
-    width: 100px;
+#botao {
+    color: black;
+    background: white;
 }
 
-.header {
-    padding-bottom: 120px;
-}
-
-.container {
-    width: 100%;
-}
-
-.card {
-    width: 25%;
-    margin: 0 auto;
-    text-align: center;
-    background: #fff;
-    border-radius: 10px;
-}
-
-.titulo {
-    padding-top: 20px;
-}
-
-.dados, .botoes {
-    width: 50%;
-    margin: 0 auto;
-}
-
-.dados input {
-    width: 100%;
-    margin-top: 40px;
-}
-
-.dados input, .registrar {
-    border-top: 0px;
-    border-right: 0px;
-    border-left: 0px;
-}
-
-.registrar {
-    background: #fff;
-    border-bottom: 0px;
-}
-
-.dados input:focus {
-    outline: none;
-}
-
-.continuar {
-    height: 40px;
-    width: 80%;
-    background: #fff;
-}
-
-.botoes {
-    padding-top: 65px;
-    padding-bottom: 65px;
-}
-
-.registrar {
-    padding-top: 20px;
+.bg {
+	width: 40px;
+	height: 40px;
 }

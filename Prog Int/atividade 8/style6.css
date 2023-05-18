@@ -1,0 +1,69 @@
+* {
+    font-family: Cambria;
+    text-decoration: none;
+}
+
+body {
+    background: #271F36;
+}
+
+.modal {
+    width: 300px;
+}
+
+.modal-content {
+    width: 300px;
+}
+
+.list-group-item:hover {
+    background-color: rgb(153, 151, 151);
+}
+
+#resumo, #carteiras, #evo {
+    background: white;
+    border: 2px solid rgb(141, 140, 140);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+#grafico {
+    justify-content: center;
+}
+
+.circulo {
+    height: 300px;
+    width: 300px;
+    background: gray;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 20px;
+}
+
+#card-ativos {
+    border: 1px solid rgb(44, 44, 44);
+    border-radius: 7px;
+}
+
+#ativos {
+    padding: 2px;
+    border: 1px solid rgb(44, 44, 44);
+    border-radius: 7px;
+}
+
+.titu {
+    font-size: 13px;
+}
+
+#tipo {
+    font-size: 10px;
+    background: rgb(0, 81, 255);
+    color: white;
+    border-radius: 6px;
+}
+
+#apli {
+    border-left: 1px solid rgb(44, 44, 44);
+    border-right: 1px solid rgb(44, 44, 44);
+}
