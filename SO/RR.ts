@@ -7,6 +7,7 @@ class tarefa {
     tv: number;
     te: number;
     ultimaEspera: number;
+    jaExec: boolean;
 
 
     constructor(id, ingresso, duracao, prioridade) {
@@ -17,6 +18,7 @@ class tarefa {
         this.tempoRestante = duracao;
         this.te = 0;
         this.ultimaEspera = ingresso;
+        this.jaExec = false;
     }
 }
 
@@ -79,7 +81,12 @@ class escalonador {
                     this.isTC = true;
                 } else {
                     if(this.tamFila > 1) {
-                        this.fila[0].te += this.tempo - this.fila[0].ingresso;
+                        if(this.fila[0].jaExec === false) {
+                            this.fila[0].te += this.tempo - this.fila[0].ingresso;
+                            this.fila[0].jaExec = true;
+                        } else {
+                            this.fila[0].te += this.tempo - this.fila[0].ultimaEspera;
+                        }
                         console.log(`Tempo ${this.tempo}: Tarefa t${this.fila[0].id} em execução.`);
                         this.tempo+= this.quantum;
                         this.fila[0].tempoRestante -= this.quantum;
@@ -95,7 +102,7 @@ class escalonador {
                     }
                 }
             } else {
-                for(let i = 0; i < 4; i++) {
+                for(let i = 0; i < this.tc; i++) {
                     console.log(`Tempo ${this.tempo}: Troca de contexto.`);
                     this.tempo++
                 }
