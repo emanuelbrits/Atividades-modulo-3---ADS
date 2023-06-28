@@ -1,3 +1,4 @@
+//grupo: emanuel, italo, nicolas
 #include <iostream>
 using namespace std;
 
